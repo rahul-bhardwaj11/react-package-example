@@ -3,8 +3,18 @@
   "version": "1.0.1",
   "description": "this package can be used for adding two numbers",
   "main": "index.js",
+  "devDependencies": {
+    "husky": "^1.1.1",
+    "@commitlint/cli": "^7.5.2",
+    "@commitlint/config-conventional": "^7.5.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
   },
   "author": "Rahul Bhardwaj",
   "license": "ISC"
